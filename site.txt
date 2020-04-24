@@ -15,3 +15,5 @@ https://bourbonkk.tistory.com/65
 
 kali에 docker 설치
 https://ykarma1996.tistory.com/82
+위 안되면 이걸로 docker 설치
+https://computingforgeeks.com/install-docker-and-docker-compose-on-kali-linux/
