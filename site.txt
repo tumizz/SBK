@@ -1,4 +1,8 @@
 레드 팀 툴킷 컨넥션
 https://0xsp.com/offensive/red-teaming-toolkit-collection
 
+승용이 사이트
 http://bongbongco.blogspot.com/
+
+And/iOS 취약점 분석
+https://dazemonkey.tistory.com/category/Hacking%20%26%20Security/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9
