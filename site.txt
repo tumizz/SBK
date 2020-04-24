@@ -13,4 +13,5 @@ http://blog.naver.com/chogar
 android 자동화진단 MObSF
 https://bourbonkk.tistory.com/65
 
-
+kali에 docker 설치
+https://ykarma1996.tistory.com/82
