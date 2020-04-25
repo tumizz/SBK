@@ -14,13 +14,10 @@ android 자동화진단 MObSF
 https://bourbonkk.tistory.com/65
 
 kali에 docker 설치
-https://docs.docker.com/engine/install/debian/
-https://ykarma1996.tistory.com/82
-위 안되면 이걸로 docker 설치
-https://computingforgeeks.com/install-docker-and-docker-compose-on-kali-linux/
+https://futurecreator.github.io/2018/11/16/docker-container-basics/
 
 kaliLinux 홈페이지
 https://www.kalitut.com/
 
-repository 오류 시 경로
+kali apt-get repository 오류 시 경로
 https://www.kali.org/docs/general-use/kali-linux-sources-list-repositories/
