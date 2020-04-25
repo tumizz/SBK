@@ -1,0 +1,15 @@
+docker run hello-world
+
+ service docker start
+ 
+ docker version
+ 
+ docker hub 
+ 
+ docker pull intrusionexploitation/dvwa-wordpress2.2-bricks
+ 
+docker run --name intrusionexploitation intrusionexploitation/dvwa-wordpress2.2-bricks
+ 
+docker ps 
+ 
+ docker inspect c56114185c72
