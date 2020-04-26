@@ -14,5 +14,13 @@ docker ps
  
  docker inspect c56114185c72
 
-docker 모의해킹 github 사이트
+docker 모의해킹 테스트 자료
 https://github.com/enaqx/awesome-pentest#docker-for-penetration-testing
+
+
+Mobsf 도커 모바일 프레임 워크 설치
+https://github.com/MobSF/Mobile-Security-Framework-MobSF
+
+Android악성코드 샘플파일
+https://github.com/sk3ptre/AndroidMalware_2020
+
