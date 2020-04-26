@@ -27,11 +27,8 @@ Frida 주요 기능
  >nox_adb -s 127.0.0.1:62001 shell
  
   
- ------------------------Frida 환경 구축-------------------------------------------
+-------------------------------------------------------Frida 관련 문서-----------------------------------------------------------
  
- >activate py3
- >pip install frida-tools
- >frida --version //12.8.20 앱과 PC에 동일한 서버버전을 설치해야됨
  
  프리다 공식홈페이지
  https://frida.re/docs/android/
@@ -39,6 +36,20 @@ Frida 주요 기능
  프리다 서버
  https://github.com/frida/frida/releases
  
+ Appmon
+ https://github.com/dpnishant/appmon
+ 
+  리눅스 open 함수
+ man7.org/linux/main-pages/man2/open.2.html
+ 
+ frida javascript API
+ www.frida.re/docs/javascript-api
+  ------------------------Frida 환경 구축-------------------------------------------
+  >activate py3
+ >pip install frida-tools
+ >frida --version //12.8.20 앱과 PC에 동일한 서버버전을 설치해야됨
+  
+  
  frida server 옮김
  >nox_adb push C:\Users\POKER\Desktop\앱취약점진단\frida\frida-server-12.6.11-android-x86\frida-server-12.6.11-android-x86 /data/local/tmp
  #cd /data/local/tmp
@@ -71,24 +82,168 @@ Frida 주요 기능
  
  >frida -U com.android.chrome //연결되면 Tab버튼 누르면 명령어 사용할 수 있음
  
+ >frida -U com.android.chrome -l chrome.js //스크립트 실행
  
+ >frida-ls-devices -h
+ >frida-trace -h
+ >frida-ps -h //도움말
  
+
+ >nox_adb devices
+ >frida-ps -D 127.0.0.1:62001 //디바이스에 실행중인 프로세스 나열
+ 안될경우
+ >tasklist, netstat -aon | findstr //nox일 경우 VMhandle PID 찾기
  
+
  
+ ###open.js 소스
+ onEnter: function (log, args, state) {
+   log('open(' + 'pathname=' + Memory.readUtf8String(args[0]) + ', flags=' + args[1] + ')');
+ },
  
+ onLeave: function (log, retval, state) {
+    }
+ }
  
+ >frida-ps -Ua //실행중인 Appl목록만 출력됨
+ >frida-trace -i "open" -U com.android.chrome //해당앱에 대해 open 함수 모니터링
+
+프로세스 중지
+ >frida-kill -h
+ >frida-kill -U [PID] //프로세스 종료
+
+####frida 루팅 우회 후킹 스크립트##########################
+console.log("[*] Starting Script");
+Java.perform(function() {
+    bClass = Java.use("com.android.kt.b");
+    bClass.onClick.implementation = function(v) {
+         console.log("[*] onClick called");
+    }
+    console.log("[*] onClick handler modified");
+}
+########################################################### 
+
+*******프리다 기본 문법*******
+ Java.perform(fn)
+ Java.use(className)
+ Java.enumerateLoadedClasses(callbacks)
+ Java.choose(className, callbacks)
+ setImmediate(fn)
+ Overloading
  
+1.  Java.perform(fn)
+ - 현재 스레드가 가상머신에 연결되어 있는지 확인하고 fn을 호출 
+ Java.perform(function() {
  
+ }
  
+2. Java.use(className)
+ - Java.use()는 변수와 메소드에 액세스 할 수 있는 클래스 객체를 반환 //Java.choose를 사용해야함
+ - 메소드 구현을 변경하려면 새로운 메소드로 덮어 써야 함
+ - 주의! 인스턴스를 반환하는 것이 아닌 클래스 객체를 반환함
  
+ - 앱에서 사용하는 클래스와 연동되는 myClass를 정의
+ - .implementation : 앱에서 정의된 메소드의 구현 내용을 재작성
+
+################source Code######################
+
+Java.perform(function() {
+     var myClass = Java.use(com.mypackage.name.class)
+     myClass.myMethod.implementation = function(param)
+     {
+     }
+}
  
+2-1. Java.choose(className, callbacks)
+ - 힙에서 인스턴스화 된 객체 찾기 가능
+ - callbacks : onMatch, onComplete
+ - onMatch : 실시간으로 인스턴스에 대해 호출
+ - onComplete : function()의 모든 인스턴스가 열거될 때 호출
  
+#######################source Code#################
+
+Java.perform(function()
+ {
+   Java.choose(com.mypackage.name.class,
+   {
+   "onMatch" : function(instance){
+     console.log(instance.toString())
+     },
+   "onComplete":function() {}
+   })
+ })
  
- 
- 
- 
- 
- 
+4. Java.enumerateLoadedClasses(callbacks)
+ - 로드된 모든 클래스를 열거하고 모든 일치 항목을 출력
+  -- onMatch : 일치하는 것을 찾으면 호출
+  -- onComplete : 가능한 일치(Match)를 모두 마치면 사용됨
+
+###################Source Code########################
+Java.perform(function()
+{
+   Java.enumerateLoadedClasses(
+   {
+       "onMatch" : function(className) {
+           console.log(className)
+       }, 
+       "onComplete":function() {}
+   })
+})
+
+5. setimmediate(fn)
+ - Process terminated 오류 해결하기 // 에뮬레이터가 느려질때 시간초과되어 연결자동 종료되는 경우가 있어서 setimmediate()함수로 포장함
+
+########################Source Code##############
+setImmediate(function() {//prevent timeout
+   console.log("[*] Starting script");
+   
+   Java.perform(function() {
+      myClass = Java.use("com.package.name.class.name");
+      myClass.implementation = function(v) {
+        // do sth.
+   }
+})})
+
+
+6. Overloading
+ 메소드 구현을 재작성할 때 유의! 다형성(?)!!
+  만약 다음과 같이 세 가지의 경우는 어떻게 처리할까? overload() 제공
+   1) 입력받는 인수가 없는 메소드
+   2) 두 개의 바이트 배열을 인수로 입력 받는 메소드
+   3) 앱의 context와 Boolean 형태의 인수로 입력받는 메소드
+
+######################Source Code#####################
+myClass.myMethod.overload().implementation = function() {
+    //do sth
+}
+
+myClass.myMethod.overload("[B", "[B").implementation = function(param1, param2){
+    //do sth
+}
+
+myClass.myMethod.overload("android.context.Context", "boolean").implementation = function(param1, param2) {
+    //do sth
+}
+
+
+* overload() 매개변수 카테고리
+ .overload()
+ .overload('int')
+ .overload('boolean')
+ .overload('float')
+ .overload('[B')
+ .overload('[B', '[B', '[B')
+ .overload('java.io.File')
+ .overload('java.lang.String')
+ .overload('android.view.View')
+ .overload('android.app.Activity')
+ .overload('android.content.Context')
+ .overload('android.content.Context', 'java.lang.String')
+ .overload('java.lang.String', 'java.lang.String')
+ .overload('android.graphics.Bitmap')
+ .overload('java.util.List')
+ .overload('android.content.Context', 'java.lang.String', 'java.lang.String')
+ .overload('android.app.Activity', 'int', 'int', 'int', 'boolean')
  
  
  
