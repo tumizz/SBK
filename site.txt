@@ -13,7 +13,7 @@ http://blog.naver.com/chogar
 android 자동화진단 MObSF
 https://bourbonkk.tistory.com/65
 
-kali에 docker 설치
+kali에 docker 설치 및 기본명령어 
 https://futurecreator.github.io/2018/11/16/docker-container-basics/
 
 kaliLinux 홈페이지
