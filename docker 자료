@@ -9,7 +9,8 @@ docker run hello-world
  docker pull intrusionexploitation/dvwa-wordpress2.2-bricks
  
 docker run --name intrusionexploitation intrusionexploitation/dvwa-wordpress2.2-bricks
- 
+docker run --name mobsf -p 8000:8000 opensecurity/mobile-security-framework-mobsf:latest
+
 docker ps 
  
  docker inspect c56114185c72
