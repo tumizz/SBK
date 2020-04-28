@@ -307,6 +307,200 @@ setImmediate(function(){
 	})
 })
 
+>frida -U -l instance_chrome.js com.android.chrome
+
+객체 = 구현해야될 대상, 자동차
+클래스 =객체를 구현해야될 설계도, 자동차 설계도 
+인스턴스 = 설계도를 따라서 소프트웨어에서 구현된 실체, 아우디
+
+ ----------------------------------------------파이썬 바인딩----------------------------------------
+* 프리다로 작업을 자동화 하기
+ - 파이썬 코드 실행으로 아래와 같은 기능이 가능함
+ 1. 프로세스 식별하고 연결
+ 2. 연결된 디바이스에서 구현하려는 프로세스와 세션 연결
+ 3. 자바스크립트로 작성된 페이로드 자동 삽입
+
+예제)
+import frida
+
+jscode = """payload_code"""
+
+session = frida.get_usb_device().attach("com.your.package.name")
+script = session.create_script(jscode)
+script.load()
+sys.stdin.read()
+
+* 파이썬 바인딩 기본 구조
+1)
+#frida, sys 모듈 가져오기
+import frida, sys
+
+# 삽입할 자바스크립트 코드 넣기
+jscode="""payload_code"""
+
+#frida를 시작하고 USB장치에서 com.your.package.name 프로세스 연결
+session = frida.get_usb_device().attach("com.your.package.name")
+
+#jscode에 있는 스크립트 코드를 frida에서 사용할 수 있도록 생성
+script = session.create_script(jscode)
+
+#생성한 script를 로드
+script.load()
+
+#script가 동작하기 전에 종료되는 문제 예방
+sys.stdin.read()
+
+
+2)
+# frida를 시작하고 USB장치에 연결
+device = frida.get_usb_device()
+
+# 연결된 USB 장치에서 com.your.package.name 프로세스 생성
+pid = device.spawn(["com.your.package.name"])
+
+# com.your.package.name 프로세스 연결
+session = device.attach(pid)
+
+#jscode에 있는 스크립트 코드를 frida에서 사용할 수 있도록 생성
+script = session.create_script(jscode)
+
+#생성한 script를 로드
+script.load()
+
+# com.package.name 프로세스 메인 스레드 실행
+device.resume(pid)
+
+#script가 동작하기 전에 종료되는 문제 예방
+sys.stdin.read()
+
+
+* 파이썬 바인딩 파일 만들기
+ - android.app.Activity 클래스의 onResume 함수 덮어쓰기
+[onresume.py]
+import frida, sys
+
+jscode="""
+console.log("[*] Starting onResume script");
+Java.perform(function(){
+  var Activity = Java.use("android.app.Activity")
+   Activity.onResume.implementation = function(){
+      console.log("[*] onResume() got called!"); 
+      this.onResume();
+   };
+});
+"""
+session = frida.get_usb_device().attach("com.android.chrome")
+script = session.create_script(jscode)
+script.load()
+sys.stdin.read()
+
+>python onresume.py
+
+* 메시지 처리하기
+ send(message[,data])
+  - 프리다 기반 애플리케이션에 자바스크립트 객체 message 전송
+ 
+ script.on('message', on_message)
+  - 프리다 스크립트에서 보낸 메시지를 처리할 콜백 함수를 설정
+  - 호출할 핸들러를 등록하는 과정
+  
+ on_message(message, data)
+  - script.on('message', on_message)에서 등록한 핸들러에 대한 정의를 하는 부분
+  - 단순히 message 매개변수를 콘솔에 출력하는 역할
+  
+[메시지 처리하기 예제]
+onresume.py
+import frida, sys
+
+def on_message(message, data):
+    if message['type'] == 'send':
+        print(message['payload'])
+    else:
+        print(message)
+
+jscode = """
+setImmediate(function(){
+	Java.perform(function(){
+		var Activity=Java.use("android.app.Activity")
+		Activity.onResume.implementation = function(){
+			send("[*] onResume() got called!");
+			this.onResume();
+		};
+	});
+});
+"""
+session = frida.get_usb_device().attach("package.name")
+script = session.create_script(jscode)
+script.on('message', on_message)
+script.load()
+sys.stdin.read()
+
+
+----------------------------------------------프리다 챌린지 연습----------------------------------------
+
+FridaLab
+http://rossmarks.uk/blog/fridalab
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
