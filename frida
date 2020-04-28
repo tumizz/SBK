@@ -441,6 +441,37 @@ sys.stdin.read()
 FridaLab
 http://rossmarks.uk/blog/fridalab
 
+01. Change class challenge_01's variable 'chall01' to 1 //클래스 challenge_01의 변수 chall01을 1로 변경하기
+02. Run chall02() //Chall02() 메소드 실행하기
+03. Make chall03() return true //chall03() 메소드가 true 반환하게 만들기
+04. Send "frida" to chall04() //chall04() 메소드에 frida 문자열 전송하기
+05. Always send "frida" to chall05() //chall05() 메소드에 frida 문자열 항상 전송하기
+06. Run chall06() after 10 seconds with correct value //올바른 값으로 10초 후 chall06() 메소드 실행하기
+07. Bruteforce check07Pin() then confirm with chall07() //chall07Pin() 메소드를 브루트포스해서 chall07() 메소드로 확인하기
+08.Change 'check' button's text value to 'Confirm' //check 버튼의 텍스트를 Confirm으로 변경하기 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
