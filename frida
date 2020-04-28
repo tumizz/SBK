@@ -246,9 +246,69 @@ myClass.myMethod.overload("android.context.Context", "boolean").implementation =
  .overload('android.app.Activity', 'int', 'int', 'int', 'boolean')
  
  
+ ----------------------------------------------frida 실습----------------------------------------
  
- 
- 
+프로세스에 스크립트를 인젝션하기 위한 사전 작업
+1. 애플리케이션 프로세스 실행 후 자바스크립트 삽입
+>activate py3
+
+>frida-ps -Ua
+>frida -U com.android.chrome //chrome 프로세스에 attach
+
+
+2. 애플리케이션 프로세스 시작되기 전 자바스크립트 삽입
+>frida-kill -U com.android.chrome
+
+>frida-ps -Ua
+
+>frida -U -f com.android.chrome //f 옵션 : 프로세스가 메인스레드 시작되기전상태를 다룰 수있음
+com.android.chrome]-> %resume //chrome 메인쓰레드 시작 
+>frida -U --no-pause -f com.android.chrome //자동으로 메인쓰레드 시작
+
+>frida-kill -U PID //chrome 프로세스 종료
+
+>frida -U --no-pause -f com.android.chrome -l hooking.js //메인쓰레드가 시작되기 전에 javascript code가 삽입되고 나서 메인쓰레드 시작됨
+
+com.android.chrome]->Java.androidVersion //javascript version 확인
+com.android.chrome]->Java.perform(function(){
+Java.enumerateLoadedClasses({"onMatch":function(className){console.log(className)},"onComplete":function(){}})}) //Class 목록 출력
+
+
+(py3)>frida -U -l class_print.js com.android.chrome //javascript code 실행 방법
+
+* Android 구조
+onCreate()
+onStart() <- onRestart()
+onResume()
+Activity running
+onPause()
+onStop()          ^ 
+onDestroy() ->    i
+
+구글 검색 : android developers onresume //Activity는 Android.app.Activity 클래스에 
+* onResume() 후킹 함수 작성
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
  
  
