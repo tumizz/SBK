@@ -246,7 +246,7 @@ myClass.myMethod.overload("android.context.Context", "boolean").implementation =
  .overload('android.app.Activity', 'int', 'int', 'int', 'boolean')
  
  
- ----------------------------------------------frida 실습----------------------------------------
+ ----------------------------------------------Javascript 파일  ----------------------------------------
  
 프로세스에 스크립트를 인젝션하기 위한 사전 작업
 1. 애플리케이션 프로세스 실행 후 자바스크립트 삽입
@@ -289,8 +289,23 @@ onDestroy() ->    i
 * onResume() 후킹 함수 작성
 
 
-
-
+* 프리다 스크립트 파일 사용하기
+힙에서 인스턴스화 된 android.view.View 객체 찾기
+ - 애플리케이션에서 눈에 보이는 이미지, 버튼 등을 가리킴
+ 
+######################Source Code###########################
+setImmediate(function(){
+	Java.perform(function(){
+		Java.choose("android.view.View", {
+			"onMatch" : function(instance){
+				console.log("[*] Instance found");
+			},
+			"onComplete" : function(){
+				console.log("[*] Finished heap search");
+			}
+		})
+	})
+})
 
 
 
