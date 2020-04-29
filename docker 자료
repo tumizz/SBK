@@ -3,20 +3,28 @@ https://www.bsidesoft.com/7851
 
 docker run hello-world
 
- service docker start
+service docker start
  
- docker version
+docker version
  
- docker hub 
+docker hub 
  
- docker pull intrusionexploitation/dvwa-wordpress2.2-bricks
+docker pull intrusionexploitation/dvwa-wordpress2.2-bricks
  
 docker run --name intrusionexploitation intrusionexploitation/dvwa-wordpress2.2-bricks
 docker run --name mobsf -p 8000:8000 opensecurity/mobile-security-framework-mobsf:latest
 
 docker ps 
  
- docker inspect c56114185c72
+docker inspect c56114185c72
+
+docker stop [컨테이너ID 또는 이름] //컨테이너 중지 
+
+docker diff // 컨테이너 디렉터리 구조
+
+docker container exec [컨테이너ID] ls -al //컨테이너에 명령 실행
+
+docker cp a.txt tc:/usr/local/tomcat/webapps/ROOT //컨테이너에 파일 복사
 
 docker 모의해킹 테스트 도구모음
 https://github.com/enaqx/awesome-pentest#docker-for-penetration-testing
