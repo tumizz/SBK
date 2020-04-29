@@ -1,5 +1,6 @@
 레드 팀 툴킷 컨넥션
 https://0xsp.com/offensive/red-teaming-toolkit-collection
+https://github.com/infosecn1nja/Red-Teaming-Toolkit
 
 승용이 사이트
 http://bongbongco.blogspot.com/
@@ -21,3 +22,31 @@ https://www.kalitut.com/
 
 kali apt-get repository 오류 시 경로
 https://www.kali.org/docs/general-use/kali-linux-sources-list-repositories/
+
+SK infosec 정보보안 블로그
+https://m.blog.naver.com/PostList.nhn?blogId=skinfosec2000
+
+[CVE 공격 코드 검색 사이트]
+sploitus.com
+vuldb.com
+null-byte.wonderhowto.com
+omespino.com
+
+[    bug bounty    ]
+hackerone.com
+medium.com/bugbountywriteup
+bugcrowd.com
+
+
+
+github.com/0x48piraj/Jiraffe //지라 소스코드 관리 도구
+
+
+
+
+
+
+
+
+
+
