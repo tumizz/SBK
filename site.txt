@@ -26,6 +26,8 @@ https://www.kali.org/docs/general-use/kali-linux-sources-list-repositories/
 SK infosec 정보보안 블로그
 https://m.blog.naver.com/PostList.nhn?blogId=skinfosec2000
 
+github.com/0x48piraj/Jiraffe //지라 소스코드 관리 도구
+
 [CVE 공격 코드 검색 사이트]
 sploitus.com
 vuldb.com
@@ -38,15 +40,11 @@ medium.com/bugbountywriteup
 bugcrowd.com
 
 
-
-github.com/0x48piraj/Jiraffe //지라 소스코드 관리 도구
-
-
 [CTF]
 root-me
 
-
-
+웹취약점 치트시트
+https://github.com/swisskyrepo/PayloadsAllTheThings
 
 
 
