@@ -1,6 +1,9 @@
 JAVA API 공식 홈페이지
 https://docs.oracle.com/en/java/javase/14/docs/api/index.html
 
+OWASP에서 제공하는 
+https://github.com/OWASP/owasp-mstg
+
 레드 팀 툴킷 컨넥션
 https://0xsp.com/offensive/red-teaming-toolkit-collection
 https://github.com/infosecn1nja/Red-Teaming-Toolkit
