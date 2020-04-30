@@ -451,13 +451,14 @@ http://rossmarks.uk/blog/fridalab
 08.Change 'check' button's text value to 'Confirm' //check 버튼의 텍스트를 Confirm으로 변경하기 
 
 
+* 1. 클래스 challenge_01의 변수 chall01을 1로 변경하기
 
-
-
-
-
-
-
+setImmediate(function() {
+	Java.perform(function(){
+		chall_01 = Java.use("uk.rossmarks.fridalab.challenge_01")
+		chall_01.chall01.value = 1; //value는 속성이라는 뜻 js에서 객체내부의 속성
+	})
+})
 
 
 
