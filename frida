@@ -586,11 +586,22 @@ setTimeout(function(){
 			}
 		})
 		
-		
+----------------------------------------------프리다 실무----------------------------------------		
 
+>frida -U --no-pause -l Uncrackable1.js -f owasp.mstg.uncrackable1
 
+* 루팅 우회
 
+System.exit(0); // java.lang.System에서 불러오는 종료 메소드
 
+setImmediate(function(){
+	Java.perform(function(){
+		var exit_bypass = Java.use("java.lang.System");
+		exit_bypass.exit.implementation = function(arg){
+			console.log("[*] Exit Bypass");
+		}
+	})
+})
 
 
 
