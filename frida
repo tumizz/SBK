@@ -45,6 +45,9 @@ Frida 주요 기능
  JAVA API 공식 
  https://docs.oracle.com/en/java/javase/14/docs/api/index.html
  
+ OWASP에서 제공하는 샘플파일
+ https://github.com/OWASP/owasp-mstg
+ 
  Appmon
  https://github.com/dpnishant/appmon
  
