@@ -42,6 +42,9 @@ Frida 주요 기능
  프리다 서버
  https://github.com/frida/frida/releases
  
+ JAVA API 공식 
+ https://docs.oracle.com/en/java/javase/14/docs/api/index.html
+ 
  Appmon
  https://github.com/dpnishant/appmon
  
@@ -93,7 +96,7 @@ Frida 주요 기능
  >frida-ls-devices -h
  >frida-trace -h
  >frida-ps -h //도움말
- 
+ >frida-kill -U [PID] //frida kill
 
  >nox_adb devices
  >frida-ps -D 127.0.0.1:62001 //디바이스에 실행중인 프로세스 나열
@@ -443,6 +446,7 @@ sys.stdin.read()
 
 
 ----------------------------------------------프리다 챌린지 연습----------------------------------------
+>frida -U -l fridalab.js uk.rossmarks.fridalab
 
 FridaLab
 http://rossmarks.uk/blog/fridalab
@@ -461,20 +465,88 @@ http://rossmarks.uk/blog/fridalab
 
 setImmediate(function() {
 	Java.perform(function(){
-		chall_01 = Java.use("uk.rossmarks.fridalab.challenge_01")
+		//Challenge 01
+		var chall_01 = Java.use("uk.rossmarks.fridalab.challenge_01")
 		chall_01.chall01.value = 1; //value는 속성이라는 뜻 js에서 객체내부의 속성
+		console.log("\nSolved Challenge 01");
 	})
 })
 
 
+2. Chall02() 메소드 실행하기
+ - static method면 Java.use 사용, instance method면 Java.choose 사용하면 됨
+ 
+setImmediate(function() {
+	Java.perform(function(){
+		//Challenge 02
+		//instance 메소드는 Java.choose를 사용해야함
+		Java.choose("uk.rossmarks.fridalab.MainActivity", {
+			onMatch : function(chall_02){
+				chall_02.chall02();
+			},
+			onComplete : function(){
+			console.log("\nSolved Challenge 02");
+			}
+		})
+	})
+})
+
+3. chall03() 메소드가 true 반환하게 만들기
+
+//Challenge 03
+		var chall_03 = Java.use("uk.rossmarks.fridalab.MainActivity");
+		chall_03.chall03.implementation = function(){
+			console.log("\nSolved Challenge 03");
+			return true;
 
 
 
+4. chall04() 메소드에 frida 문자열 전송하기
+//Challenge 04
+		Java.choose("uk.rossmarks.fridalab.MainActivity",{
+			onMatch : function(chall_04){
+				console.log("\nfrida string send");
+				chall_04.chall04("frida");
+			},
+			onComplete : function(){
+				console.log("\nSolved Challenge 04");
+			}
+		})
+
+5. chall05() 메소드에 frida 문자열 항상 전송하기
+//Challenge 05
+		var chall_05 = Java.use("uk.rossmarks.fridalab.MainActivity");
+		chall_05.chall05.overload("java.lang.String").implementation = 
+		 function(arg){
+			 this.chall05("frida");
+			 console.log("\nSolved Challenge 05");
+		 }
+
+6. 올바른 값으로 10초 후 chall06() 메소드 실행하기
+ - setTimeout(fn, delay) //몇초 후 함수 실행 
+ 
+ 
+setTimeout(function(){
+	console.log("10sec Challenge 06!");
+	setImmediate(function() {
+		Java.perform(function(){
+			var chall_06 = Java.use("uk.rossmarks.fridalab.challenge_06");
+			chall_06.addChall06.overload("int").implementation = function(arg){
+				Java.choose("uk.rossmarks.fridalab.MainActivity", {
+					onMatch : function(instance) {
+						instance.chall06(chall_06.chall06.value);
+				},
+				onComplete : function(){
+					console.log("Solved Challenge 06");
+					}
+				})
+			}
+		})
+	})
+}, 10000);
 
 
-
-
-
+7. chall07Pin() 메소드를 브루트포스해서 chall07() 메소드로 확인하기
 
 
 
