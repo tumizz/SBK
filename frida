@@ -548,10 +548,42 @@ setTimeout(function(){
 
 7. chall07Pin() 메소드를 브루트포스해서 chall07() 메소드로 확인하기
 
+//Challenge 07
+		 var chall_07 = Java.use("uk.rossmarks.fridalab.challenge_07");
+		 Java.choose("uk.rossmarks.fridalab.MainActivity",{
+			 onMatch : function(instance){
+				 for(var i=9999; i>=1000; i--){
+					 var boanproject = String(i);
+					 console.log("chall07 random : "+boanproject);
+					if(chall_07.check07Pin(boanproject)){
+						console.log("random! : "+boanproject);
+						instance.chall07(boanproject);
+						break;
+					}
+				 }
+			},
+			 onComplete : function(){
+				 console.log("\nSolved Challenge 07");
+			}
+		 })
 
-
-
-
+8. check 버튼의 텍스트를 Confirm으로 변경하기 
+ //Challenge 08
+		 var klass = Java.use("android.widget.Button");
+		 Java.choose("uk.rossmarks.fridalab.MainActivity",{
+			onMatch : function(instance){
+				var checkid = instance.findViewById(2131165231);
+				var check = Java.cast(checkid, klass);
+				var string = Java.use("java.lang.String");
+				check.setText(string.$new("Confirm")); //$new : 인스턴스화 
+				console.log("Challenge 08");
+			},
+			onComplete : function(){
+				console.log("\nSolved Challenge 08");
+			}
+		})
+		
+		
 
 
 
