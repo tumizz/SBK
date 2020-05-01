@@ -48,6 +48,9 @@ android 자동화진단 MObSF
 https://bourbonkk.tistory.com/65
 
 
+######################정보보안 참고자료#####################
+보안책 
+https://github.com/nixawk/pentest-wiki
 
 JAVA API 공식 홈페이지
 https://docs.oracle.com/en/java/javase/14/docs/api/index.html
