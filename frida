@@ -1,12 +1,13 @@
 -------------------------------------------------------Frida 관련 문서-----------------------------------------------------------
   프리다 공식홈페이지
  https://frida.re/docs/android/
+ https://github.com/frida
  
  프리다 코드 공유사이트
  https://codeshare.frida.re/browse
  
- 
- https://github.com/smudr/android-ssl-pinning
+ SSL Pinning 소스
+ https://github.com/smuldr/android-ssl-pinning
  
  하울 프리다 사용법
  https://www.hahwul.com/2017/08/hacking-frida-hooking-to-multi-platform.html
@@ -728,7 +729,7 @@ setImmediate(function(){
 
 ----------------------------------------------SSL Pinning 우회----------------------------------------	
 
-https://github.com/smudr/android-ssl-pinning
+https://github.com/smuldr/android-ssl-pinning
 
 
 
