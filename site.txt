@@ -57,3 +57,6 @@ https://github.com/CompassSecurity/Hacking_Tools_Cheat_Sheet
 
 SQL injection cheatsheet
 https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/
+
+XSS cheatsheet
+portswigger.net/web-security/cross-site-scripting/cheat-sheet
