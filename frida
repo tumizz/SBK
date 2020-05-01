@@ -604,13 +604,57 @@ setImmediate(function(){
 })
 
 
+* 암호 복호화
+/* 함수 리턴값을 트루로 바꿔서 점프
+		var trueClass = Java.use("sg.vantagepoint.uncrackable1.a");
+		trueClass.a.implementation = function(arg){
+			console.log("\n[*] True");
+			return true;
+		}
+		*/아래는 비밀번호 복호화 방법
+		var decrypteClass = Java.use("sg.vantagepoint.a.a");
+		decrypteClass.a.implementation = function(arg1, arg2){
+			var secret_string = this.a(arg1, arg2);
+			var secret_S = ''
+			for(var i=0; i<secret_string.length; i++){
+				secret_S += String.fromCharCode(secret_string[i])
+				//String.fromCharCode() ascii코드를 문자로 반환
+			}
+			console.log("[*] Decrypted : " +secret_S);
+			return secret_string;
+		}
+
+* 로그인 우회
+
+setImmediate(function(){
+	Java.perform(function(){
+		var loginBypass = Java.use("com.mwr.example.sieve.MainLoginActivity");
+		loginBypass.checkKeyResult.implementation = function(arg){
+			console.log("[*] Success Login Bypass");
+			this.checkKeyResult(true);
+		}
+	})
+})
 
 
-
-
-
-
-
+* 브루트포스 PIN번호 공격
+	
+		function padToFour(number){
+			if(number<=9999){
+				number = ("000"+number).slice(-4); //0001 0002 000333-> 0333
+				return String(number);
+			}
+		}
+		
+		
+		var pinBypass = Java.use("com.mwr.example.sieve.ShortLoginActivity");
+		pinBypass.submit.implementation = function(arg){
+			var service = this.serviceConnection.value;
+			for(var i=0; i<9999; i++){
+				service.checkPin(padToFour(i));
+				console.log(padToFour(i));
+			}
+		}	
 
 
 
