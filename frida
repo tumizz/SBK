@@ -1,5 +1,105 @@
+-------------------------------------------------------Frida 관련 문서-----------------------------------------------------------
+  프리다 공식홈페이지
+ https://frida.re/docs/android/
+ 
+ 프리다 코드 공유사이트
+ https://codeshare.frida.re/browse
+ 
+ 
+ https://github.com/smudr/android-ssl-pinning
+ 
+ 하울 프리다 사용법
+ https://www.hahwul.com/2017/08/hacking-frida-hooking-to-multi-platform.html
+ 
+ 프리다 서버
+ https://github.com/frida/frida/releases
+ 
+ JAVA API 공식 
+ https://docs.oracle.com/en/java/javase/14/docs/api/index.html
+ 
+ OWASP에서 제공하는 샘플파일
+ https://github.com/OWASP/owasp-mstg
+ 
+ Appmon
+ https://github.com/dpnishant/appmon
+ 
+  리눅스 open 함수
+ man7.org/linux/main-pages/man2/open.2.html
+ 
+ frida javascript API
+ www.frida.re/docs/javascript-api
+ 
+ - IOS 후킹 관련 사이트
 
-Frida 주요 기능
+https://scent2d.tistory.com/86 // 후킹 코드 예시가 잘 돼 있음
+
+https://j-a-l.tistory.com/6 // 후킹한 결과를 text 파일로 저장할 수 있는 부분이 정리되어 있음
+
+frida -U -f "kr.co.show.cs.full" -l C:\Users\ssw\Desktop\hookingjs\hooking.js > C:\Users\ssw\Desktop\Result1.txt 2>&1
+
+https://github.com/rubaljain/frida-jb-bypass // 클래스에 해당하는 메소드 이름을 출력할 수 있는 예시 코드가 있음.. $methods
+
+http://egloos.zum.com/playgame/v/2232039 // onEnter, onLeave에 대한 설명이 잘 정리되어 있음
+
+- frida-ps로 패키지명 출력하는 방법
+
+frida-ps -Uai
+
+
+- frida-trace 관련 사이트
+
+https://cha3m.tistory.com/22 // 단순 사용법 위주 정리
+
+frida-trace -U -f "kr.co.show.cs.full" -m "*[클래스명 메소드명]"
+
+** f 옵션은 spawn 기능과 같아서 옵션 뒤에 명시된 패키지 실행시켜줌
+
+https://thesecurity.tistory.com/1 // hooking 코드 예시에 대한 설명이 자세함
+
+
+- frida code share 사이트의 메모리에 로딩된 IOS 앱 덤프하는 방법
+
+https://codeshare.frida.re/@lichao890427/dump-ios/
+
+Clutch 같은 앱 바이너리 덤프하기 힘들 때 유용한 방법
+
+1) /private/var/mobile/Containers/Bundle/Application/00000000-0000-0000-0000-000000000000
+** 디바이스마다 다르게 표시되어 0으로 표시했습니다.
+
+경로에 있는 .app 이름을 확인하시고
+
+2) frida-server 연결
+
+3) frida --codeshare lichao890427/dump-ios -U -f "앱 패키지 이름"
+** 앱 패키지 이름은 frida-ps -Uai 로 조회 가능합니다.
+
+4) %resume 입력 후 Enter
+
+5) dumpModule("OOOOO.app") 입력 후 Enter
+
+6) /var/mobile/Containers/Data/Application/966641F6-1508-4337-AE49-32C8C5EAA5FF/Library/Caches/OOOOO.decrypted 0x3dc000 경로에 .decrypted 확장자로 저장됩니다.
+
+7) FTP 연결하셔서 복호화된 바이너리 파일 빼오시면 IDA에서 메모리에 로딩되는 클래스, 메소드 이름 확인하실 수 있습니다.
+
+
+- 탐지 소스 관련 정보
+
+https://www.cnblogs.com/lichao890427/articles/10849390.html
+
+https://wrkholic84.github.io/Frida-for-iOS/
+
+https://m.blog.naver.com/PostView.nhn?blogId=best798&logNo=221658122932&proxyReferer=https%3A%2F%2Fwww.google.com%2F
+
+https://hyunmini.tistory.com/112
+
+http://blog.naver.com/PostView.nhn?blogId=best798&logNo=221466857195&parentCategoryNo=18&categoryNo=&viewDate=&isShowPopularPosts=true&from=search
+
+https://trelis24.github.io/2019/08/09/Frida-iOS/
+
+https://mobile-security.gitbook.io/mobile-security-testing-guide/ios-testing-guide/0x06c-reverse-engineering-and-tampering
+ 
+---------------------------------------frida 실습-------------------------------------------
+ Frida 주요 기능
  - AppMon과 Needle 등의 도구에서 프리다를 기반으로 사용
  - 함수 후킹 (특정함수에 연결하여 반환 값 변경, 함수 재작성 등)
  - 애플리케이션 디버깅 가능
@@ -26,36 +126,6 @@ Frida 주요 기능
  >nox_adb devices
  >nox_adb -s 127.0.0.1:62001 shell
  
-  
--------------------------------------------------------Frida 관련 문서-----------------------------------------------------------
- 
- 
- 프리다 공식홈페이지
- https://frida.re/docs/android/
- 
- 프리다 코드 공유사이트
- https://codeshare.frida.re/browse
- 
- 하울 프리다 사용법
- https://www.hahwul.com/2017/08/hacking-frida-hooking-to-multi-platform.html
- 
- 프리다 서버
- https://github.com/frida/frida/releases
- 
- JAVA API 공식 
- https://docs.oracle.com/en/java/javase/14/docs/api/index.html
- 
- OWASP에서 제공하는 샘플파일
- https://github.com/OWASP/owasp-mstg
- 
- Appmon
- https://github.com/dpnishant/appmon
- 
-  리눅스 open 함수
- man7.org/linux/main-pages/man2/open.2.html
- 
- frida javascript API
- www.frida.re/docs/javascript-api
   ------------------------Frida 환경 구축-------------------------------------------
   >activate py3
  >pip install frida-tools
@@ -586,7 +656,7 @@ setTimeout(function(){
 			}
 		})
 		
-----------------------------------------------프리다 실무----------------------------------------		
+----------------------------------------------프리다 우회코드 ----------------------------------------		
 
 >frida -U --no-pause -l Uncrackable1.js -f owasp.mstg.uncrackable1
 
@@ -656,9 +726,9 @@ setImmediate(function(){
 			}
 		}	
 
+----------------------------------------------SSL Pinning 우회----------------------------------------	
 
-
-
+https://github.com/smudr/android-ssl-pinning
 
 
 
