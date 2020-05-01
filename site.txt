@@ -1,24 +1,67 @@
-JAVA API 공식 홈페이지
-https://docs.oracle.com/en/java/javase/14/docs/api/index.html
 
-OWASP에서 제공하는 
-https://github.com/OWASP/owasp-mstg
+###############################웹취약점 치트시트##########################
+진단 구문 페이로드
+https://github.com/swisskyrepo/PayloadsAllTheThings
+https://github.com/payloadbox
+
+해킹도구모음 
+https://github.com/CompassSecurity/Hacking_Tools_Cheat_Sheet
+
+SQL injection cheatsheet
+https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/
+
+XSS cheatsheet
+portswigger.net/web-security/cross-site-scripting/cheat-sheet
+https://github.com/payloadbox/xss-payload-list
+
+
+[CVE 공격 코드 검색 사이트]
+sploitus.com
+vuldb.com
+null-byte.wonderhowto.com
+omespino.com
+
+[    bug bounty    ]
+hackerone.com
+medium.com/bugbountywriteup
+bugcrowd.com
+
+Black-hat PENTEST bible
+https://github.com/blaCCkHatHacEEkr/PENTESTING-BIBLE
 
 레드 팀 툴킷 컨넥션
 https://0xsp.com/offensive/red-teaming-toolkit-collection
 https://github.com/infosecn1nja/Red-Teaming-Toolkit
 
-승용이 사이트
-http://bongbongco.blogspot.com/
+[CTF]
+root-me
+
+##################Mobile APP 펜테스트################################
+
+Mobile App PENTEST cheatsheet
+https://github.com/tanprathan/MobileApp-Pentest-Cheatsheet
 
 And/iOS 취약점 분석
 https://dazemonkey.tistory.com/category/Hacking%20%26%20Security/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9
 
-보안프로젝트
-http://blog.naver.com/chogar
-
 android 자동화진단 MObSF
 https://bourbonkk.tistory.com/65
+
+
+
+JAVA API 공식 홈페이지
+https://docs.oracle.com/en/java/javase/14/docs/api/index.html
+
+OWASP에서 제공하는 샘플파일
+https://github.com/OWASP/owasp-mstg
+
+
+승용이 사이트
+http://bongbongco.blogspot.com/
+
+
+보안프로젝트
+http://blog.naver.com/chogar
 
 kali에 docker 설치 및 기본명령어 
 https://futurecreator.github.io/2018/11/16/docker-container-basics/
@@ -34,36 +77,6 @@ https://m.blog.naver.com/PostList.nhn?blogId=skinfosec2000
 
 github.com/0x48piraj/Jiraffe //지라 소스코드 관리 도구
 
-[CVE 공격 코드 검색 사이트]
-sploitus.com
-vuldb.com
-null-byte.wonderhowto.com
-omespino.com
-
-[    bug bounty    ]
-hackerone.com
-medium.com/bugbountywriteup
-bugcrowd.com
 
 
-[CTF]
-root-me
 
-웹취약점 치트시트
-https://github.com/swisskyrepo/PayloadsAllTheThings
-
-해킹도구모음 
-https://github.com/CompassSecurity/Hacking_Tools_Cheat_Sheet
-
-SQL injection cheatsheet
-https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/
-
-XSS cheatsheet
-portswigger.net/web-security/cross-site-scripting/cheat-sheet
-https://github.com/payloadbox/xss-payload-list
-
-Mobile App PENTEST cheatsheet
-https://github.com/tanprathan/MobileApp-Pentest-Cheatsheet
-
-Black-hat PENTEST bible
-https://github.com/blaCCkHatHacEEkr/PENTESTING-BIBLE
