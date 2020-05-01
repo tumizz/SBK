@@ -60,3 +60,6 @@ https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/
 
 XSS cheatsheet
 portswigger.net/web-security/cross-site-scripting/cheat-sheet
+
+Mobile App PENTEST cheatsheet
+https://github.com/tanprathan/MobileApp-Pentest-Cheatsheet
