@@ -63,3 +63,6 @@ portswigger.net/web-security/cross-site-scripting/cheat-sheet
 
 Mobile App PENTEST cheatsheet
 https://github.com/tanprathan/MobileApp-Pentest-Cheatsheet
+
+Black-hat PENTEST bible
+https://github.com/blaCCkHatHacEEkr/PENTESTING-BIBLE
