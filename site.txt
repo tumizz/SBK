@@ -3,6 +3,8 @@
 진단 구문 페이로드
 https://github.com/swisskyrepo/PayloadsAllTheThings
 https://github.com/payloadbox
+https://github.com/foospidy/payloads
+
 
 해킹도구모음 
 https://github.com/CompassSecurity/Hacking_Tools_Cheat_Sheet
