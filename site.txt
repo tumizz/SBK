@@ -38,6 +38,21 @@ https://github.com/infosecn1nja/Red-Teaming-Toolkit
 [CTF]
 root-me
 
+세계적으로 다양한 해킹 실습환경 모아둔 웹 사이트
+wechall.net
+
+웹해킹 워게임
+webhacking.kr
+
+시스템 해킹 및 CTF에서 출제되는 문제들과 흡사한 부분이 많고 퀄리티가 높음
+pwnable.kr
+
+웹 해킹, 시스템 해킹 등 난이도를 쉽게 구성하여 초보자가 입문하기에 적합한 해킹공부 사이트
+suninatas.com
+
+파이썬 해킹문제사이트
+pythonchallenge.com
+
 ##################Mobile APP 펜테스트################################
 
 Mobile App PENTEST cheatsheet
