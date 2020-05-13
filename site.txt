@@ -56,6 +56,8 @@ suninatas.com
 파이썬 해킹문제사이트
 pythonchallenge.com
 
+web해킹 
+https://hack-cracker.tistory.com/41
 ##################Mobile APP 펜테스트################################
 
 Mobile App PENTEST cheatsheet
