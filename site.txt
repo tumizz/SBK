@@ -56,6 +56,7 @@ suninatas.com
 파이썬 해킹문제사이트
 pythonchallenge.com
 
+
 web해킹 
 https://hack-cracker.tistory.com/41
 ##################Mobile APP 펜테스트################################
@@ -69,13 +70,24 @@ https://dazemonkey.tistory.com/category/Hacking%20%26%20Security/%EB%AA%A8%EC%9D
 android 자동화진단 MObSF
 https://bourbonkk.tistory.com/65
 
+######################프로그래밍#####################
+JAVA API 공식 홈페이지
+https://docs.oracle.com/en/java/javase/14/docs/api/index.html
+
+파이썬
+www.python.org
+
+virtualenv
+https://virtualenv.pypa.io/en/stable/
+
+conda
+https://conda.io/docs/download.html
+
 
 ######################정보보안 참고자료#####################
 보안책 
 https://github.com/nixawk/pentest-wiki
 
-JAVA API 공식 홈페이지
-https://docs.oracle.com/en/java/javase/14/docs/api/index.html
 
 OWASP에서 제공하는 샘플파일
 https://github.com/OWASP/owasp-mstg
