@@ -36,6 +36,9 @@ https://0xsp.com/offensive/red-teaming-toolkit-collection
 https://github.com/infosecn1nja/Red-Teaming-Toolkit
 
 [CTF]
+Theori Dreamhack
+https://dreamhack.io/
+
 root-me
 
 세계적으로 다양한 해킹 실습환경 모아둔 웹 사이트
