@@ -85,6 +85,9 @@ https://conda.io/docs/download.html
 
 
 ######################정보보안 참고자료#####################
+정보보안기사
+http://cms2580.cafe24.com/select.jsp
+
 보안책 
 https://github.com/nixawk/pentest-wiki
 
