@@ -18,6 +18,8 @@ docker ps
  
 docker inspect c56114185c72
 
+docker start [container ID]
+
 docker stop [컨테이너ID 또는 이름] //컨테이너 중지 
 
 docker diff // 컨테이너 디렉터리 구조
