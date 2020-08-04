@@ -16,6 +16,8 @@ XSS cheatsheet
 portswigger.net/web-security/cross-site-scripting/cheat-sheet
 https://github.com/payloadbox/xss-payload-list
 
+seed 암/복호화 사이트 
+https://encode-decode.com/seed-encrypt-online/
 
 [CVE 공격 코드 검색 사이트]
 sploitus.com
