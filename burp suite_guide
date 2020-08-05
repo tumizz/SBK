@@ -8,3 +8,9 @@ extender 확장기능
  - Pcap Importer
  - Logger++ 
  - JSON Beautifier
+
+burp suite에 크롬 개발자도구 추가 
+https://github.com/1N3/IntruderPayloads/tree/master/Plugins
+
+
+https://www.hahwul.com/2018/06/03/burpkit-awesome-burp-suite-extenderburp/
