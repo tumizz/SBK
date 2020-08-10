@@ -10,6 +10,9 @@ https://github.com/fuzzdb-project/fuzzdb
 https://github.com/CompassSecurity/Hacking_Tools_Cheat_Sheet
 https://github.com/apsdehal/awesome-ctf
 
+kali tools(칼리 점검도구)
+https://tools.kali.org/tools-listing
+
 SQL injection cheatsheet
 https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/
 
@@ -17,11 +20,19 @@ XSS cheatsheet
 portswigger.net/web-security/cross-site-scripting/cheat-sheet
 https://github.com/payloadbox/xss-payload-list
 
+[인/디코딩 사이트]
+
+인/디코딩 사이트
+Napkin
+
+URL encoding online
+www.branah.com/ascii-converter
+
+md5
+md5hashing.net
+
 seed 암/복호화 사이트 
 https://encode-decode.com/seed-encrypt-online/
-
-kali tools(칼리 점검도구)
-https://tools.kali.org/tools-listing
 
 [웹 디렉터리 구조 파악]
 디렉토리 브루트포스 공격(웹 크롤링)
