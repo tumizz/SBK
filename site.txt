@@ -20,13 +20,12 @@ https://github.com/payloadbox/xss-payload-list
 seed 암/복호화 사이트 
 https://encode-decode.com/seed-encrypt-online/
 
+kali tools(칼리 점검도구)
+https://tools.kali.org/tools-listing
 
 [웹 디렉터리 구조 파악]
 디렉토리 브루트포스 공격(웹 크롤링)
 https://alwaysbeen.tistory.com/45
-
-kali tools(칼리 점검도구)
-https://tools.kali.org/tools-listing
 
  - dir_scanner
  - dir_listing
@@ -36,6 +35,14 @@ https://tools.kali.org/tools-listing
  - webdav_scanner
  - shodan
  - wayback
+ 
+msf> search dir_scanner
+msf> use auxiliary/scanner/http/dir_scanner
+msf> auxiliary(scanner/http/dir_scanner)> show options
+>set RHOSTS [대상 IP]
+>set PATH /
+>set verbose true
+>exploit
 
 [CVE 공격 코드 검색 사이트]
 sploitus.com
