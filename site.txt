@@ -20,8 +20,20 @@ https://github.com/payloadbox/xss-payload-list
 seed 암/복호화 사이트 
 https://encode-decode.com/seed-encrypt-online/
 
+
+[웹 디렉터리 구조 파악]
 디렉토리 브루트포스 공격(웹 크롤링)
 https://alwaysbeen.tistory.com/45
+
+kali tools
+ - dir_scanner
+ - dir_listing
+ - files_dir
+ - robots_txt
+ - http_login
+ - webdav_scanner
+ - shodan
+ - wayback
 
 [CVE 공격 코드 검색 사이트]
 sploitus.com
