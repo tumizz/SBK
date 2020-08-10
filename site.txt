@@ -13,6 +13,9 @@ https://github.com/apsdehal/awesome-ctf
 kali tools(칼리 점검도구)
 https://tools.kali.org/tools-listing
 
+offensive security
+https://www.offensive-security.com/metasploit-unleashed/scanner-http-auxiliary-modules/
+
 SQL injection cheatsheet
 https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/
 
