@@ -19,6 +19,9 @@ https://github.com/payloadbox/xss-payload-list
 seed 암/복호화 사이트 
 https://encode-decode.com/seed-encrypt-online/
 
+디렉토리 브루트포스 공격(웹 크롤링)
+https://alwaysbeen.tistory.com/45
+
 [CVE 공격 코드 검색 사이트]
 sploitus.com
 vuldb.com
