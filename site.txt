@@ -38,6 +38,13 @@ seed 암/복호화 사이트
 https://encode-decode.com/seed-encrypt-online/
 
 [웹 디렉터리 구조 파악]
+
+python scapy
+https://github.com/1N3/BlackWidow/
+
+gobuster
+https://github.com/OJ/gobuster
+
 디렉토리 브루트포스 공격(웹 크롤링)
 https://alwaysbeen.tistory.com/45
 
