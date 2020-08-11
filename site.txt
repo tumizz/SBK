@@ -50,6 +50,15 @@ https://alwaysbeen.tistory.com/45
  - shodan
  - wayback
  
+
+msf> service postgresql start
+msf> msfdb init
+msf> db_status
+msf> db_rebuild_cache
+msf>quit
+# update-rc.d postgresql enable //부팅시마다 postgresql 자동실행
+# reboot
+
 msf> search dir_scanner
 msf> use auxiliary/scanner/http/dir_scanner
 msf> auxiliary(scanner/http/dir_scanner)> show options
