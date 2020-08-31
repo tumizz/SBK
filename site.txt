@@ -80,6 +80,11 @@ https://pixabay.com/ko/
 이미지 사이트 
 unsplash.com
 
+이모티콘 사이트
+https://mber.tistory.com/31
+
+https://www.flaticon.com/
+
 [CVE 공격 코드 검색 사이트]
 sploitus.com
 vuldb.com
