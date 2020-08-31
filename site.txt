@@ -73,6 +73,10 @@ msf> auxiliary(scanner/http/dir_scanner)> show options
 >set PATH /
 >set verbose true
 >exploit
+##############이미지 사이트 #####################
+무료이미지 사이트
+https://pixabay.com/ko/
+
 
 [CVE 공격 코드 검색 사이트]
 sploitus.com
