@@ -37,6 +37,10 @@ md5hashing.net
 seed 암/복호화 사이트 
 https://encode-decode.com/seed-encrypt-online/
 
+
+SW 개발보안 진단원 자격 취득 참고 사이트
+https://m.blog.naver.com/gs_info/221798339313
+
 [웹 디렉터리 구조 파악]
 
 python scapy
