@@ -3,6 +3,21 @@
 리눅스 스누피로거
 https://github.com/a2o/snoopy
 
+#######대상 검색사이트#####
+
+ * 검색 사이트
+https://duckduckgo.com/
+
+ * 전문 사이트 
+ https://www.netcraft.com
+ 
+ * 이메일 수집해주는 사이트 
+ https://hunter.io
+ 
+ * OSINT 전용툴 활용 
+ FOCA(Fingerprinting Organizations with Collected Archives)
+  - 윈도우기반으로 동작, 웹 검색, DNS검색, IP확인, PTR, metadata검색기능, 네트워크 검색
+
 
 
 ###############################웹취약점 치트시트##########################
