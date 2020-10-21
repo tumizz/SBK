@@ -18,7 +18,8 @@ https://duckduckgo.com/
  FOCA(Fingerprinting Organizations with Collected Archives)
   - 윈도우기반으로 동작, 웹 검색, DNS검색, IP확인, PTR, metadata검색기능, 네트워크 검색
 
-
+ * 해킹정보 
+ https://wlgnschlkkk.tistory.com/68
 
 ###############################웹취약점 치트시트##########################
 진단 구문 페이로드
