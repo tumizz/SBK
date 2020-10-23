@@ -189,6 +189,9 @@ https://conda.io/docs/download.html
 
 
 ######################정보보안 참고자료#####################
+[R0 CREW - 모의해킹 크랙툴 사이트]
+https://forum.reverse4you.org/
+
 정보보안기사
 http://cms2580.cafe24.com/select.jsp
 
