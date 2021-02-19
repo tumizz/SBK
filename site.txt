@@ -32,6 +32,9 @@ https://duckduckgo.com/
  https://wlgnschlkkk.tistory.com/68
 
 ###############################웹취약점 치트시트##########################
+코발트스트라이커 모의해킹툴
+https://github.com/S1ckB0y1337/Cobalt-Strike-CheatSheet
+
 진단 구문 페이로드
 https://github.com/swisskyrepo/PayloadsAllTheThings
 https://github.com/payloadbox
