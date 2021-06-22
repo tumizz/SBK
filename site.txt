@@ -15,6 +15,9 @@ http://forensic-proof.com/
 github webshell tennc 사이트 
 https://github.com/tennc/webshell
 
+wordpress scan
+https://github.com/wpscanteam/wpscan/wiki/WPScan-User-Documentation
+
 ######################리버싱############################
 리버스엔지니어링 툴킷
 github.com/mentebinaria/retoolkit
