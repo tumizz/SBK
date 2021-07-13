@@ -19,6 +19,9 @@ wordpress scan
 https://github.com/wpscanteam/wpscan/wiki/WPScan-User-Documentation
 
 ######################리버싱############################
+랜섬웨어의 모든 것
+https://chuongdong.com/reverse%20engineering/2021/07/11/REvilRansomware/
+
 리버스엔지니어링 툴킷
 github.com/mentebinaria/retoolkit
 
