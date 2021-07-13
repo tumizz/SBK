@@ -1,5 +1,9 @@
 
 ##### 침해 사고 분석 ####
+
+침해분석도구 HackTricks
+https://book.hacktricks.xyz/windows/windows-local-privilege-escalation/
+
 리눅스 스누피로거
 https://github.com/a2o/snoopy
 
