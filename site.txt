@@ -25,8 +25,12 @@ https://github.com/tennc/webshell
 wordpress scan
 https://github.com/wpscanteam/wpscan/wiki/WPScan-User-Documentation
 
+Volatility install 
+https://github.com/volatilityfoundation/volatility/wiki/Installation
+
 볼라틸리티 어택디펜스 CTF
 https://attackdefense.com/challengedetailsnoauth?cid=1099
+
 
 ######################리버싱############################
 랜섬웨어의 모든 것
