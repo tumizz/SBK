@@ -30,7 +30,7 @@ https://github.com/volatilityfoundation/volatility/wiki/Installation
 
 볼라틸리티 어택디펜스 CTF
 https://attackdefense.com/challengedetailsnoauth?cid=1099
-
+https://attackdefense.com/listingnoauth?labtype=forensics-memory-forensics&subtype=forensics-memory-forensics-basics
 
 ######################리버싱############################
 랜섬웨어의 모든 것
