@@ -73,6 +73,9 @@ https://duckduckgo.com/
  https://wlgnschlkkk.tistory.com/68
 
 ###############################웹취약점 치트시트##########################
+오픈소스도구모음
+opensourcelibs.com
+
 독시즌 - 소스진단 툴
 https://github.com/doxygen/doxygen
 
