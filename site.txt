@@ -16,6 +16,9 @@ https://github.com/a2o/snoopy
 R0 CREW - 모의해킹 크랙툴 사이트
 https://forum.reverse4you.org/
 
+침투테스트사이트
+https://www.ired.team/
+
 포렌식 사이트
 https://cyberdefenders.org/labs/
 
