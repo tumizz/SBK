@@ -3,6 +3,8 @@
 이노스터디
 https://www.inostudy.net/main/index.jsp
 
+AWS 보안설정가이드
+https://rogue-gouda-f87.notion.site/AWS-de0b5749d03b464ea2e555cba3974d0b
 
 ##### 침해 사고 분석 ####
 
