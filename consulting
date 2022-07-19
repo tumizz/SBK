@@ -1,0 +1,203 @@
+####컨설팅 전 사전 참고 문서(중요도 순으로 위에서부터 기술)####
+ - 개인정보의 기술적 관리적 보호조치 기준
+ - 개인정보의 안전성 확보조치 기준
+ - ISMS-P 인증기준 세부 점검 항목
+ - ISMS-P 인증기준 안내서
+ - 개인정보보호법
+ - 정보통신망법
+ - 위치정보법
+ - 신용정보법
+ - 전자금융거래법
+ - GDPR
+ - CPPA(캐나다 소비자 개인정보보호법)
+
+####컨설팅 전 사전 숙지 필요사항####
+ * 고객사에서 질문이 많이 나오는 항목으로, 아래의 문의가 왔을때 답변을 할 수 있도록 내용 숙지 필요
+ - CISO 겸직 금지
+ - CISO 신고 제도
+ - 정보보호공시제도 의무대상 및 공시 방법
+ - 스마트폰 앱 접근권한 동의
+ - 위탁/제3자 제공 차이
+ - 14세 미만 아동의 개인정보 처리 방법
+ - 법정필수교육
+ - 안전한 암호화 알고리즘
+ - 주민등록번호 수집 근거
+
+####최신 법 개정안 정기적으로 검토####
+ - 법제처 -> 법령검색 -> 신구비교법 확인
+
+  
+  
+  
+  □ 업무관련 추천 사이트
+
+   - http://www.kiisc.or.kr/  
+
+   - http://www.kisa.or.kr/public/library/report_List.jsp 
+
+   - http://dl.nanet.go.kr/index.do 
+
+ □ 비 업무 관련 추천 사이트
+
+   - http://www.lgeri.com/ 
+
+   - http://www.digieco.co.kr/KTFront/index.action 
+
+   - http://www.seri.org/_index_.html 
+
+주요 정보 제공 Site List
+
+12.8.21
+산업별 기초분석 Site 
+http://www.kiet.re.kr/kiet_web/?sub_num=69
+
+Economist Intelligence Unit (이코노미스트)
+http://www.managementthinking.eiu.com/archive/industries/healthcare-life-sciences.html
+
+산업기술진흥원 (중점산업 기술로드맵)
+http://www.kiat.or.kr/site/program/board/list.jsp?menuID=001004005&boardTypeID=78
+
+Mckinsey Global Institue
+http://www.mckinsey.com/Insights/MGI/Research
+
+Deloitte Consulting Research
+http://www.deloitte.com/view/ko_KR/kr/library/deloitteresearch/index.htm
+
+삼일 PwC 연구보고서 / Research & Insight
+http://www.pwc.com/kr/ko/survey-report/index.jhtml
+
+AT커니 Thought Leadership On-Line Article
+http://www.atkearney.com/index.php/Publications/publications.html
+
+BCG Perspective
+https://www.bcgperspectives.com/automotive
+
+삼성경제연구소
+www.seri.org/
+
+노무라경제연구소
+http://nomura-report.co.kr/report_list.php?section=1
+
+알앤디비즈
+www.rndbiz.com
+
+국회입법조사처
+http://www.nars.go.kr/
+
+LG경제연구원
+www.lgeri.com
+
+
+KT경영경제연구소
+www.digieco.co.kr
+
+국내 산업별 정책정보 Site
+www.kiet.re.kr/kiet_web/?sub_num=40
+
+대한상공회의소
+http://www.korcham.net/
+
+아젠다넷
+http://www.agendanet.co.kr/
+
+프리즘 : 중앙부처 정책연구 용역결과물 게시 site
+www.prism.go.kr/homepage/main/index.do
+
+국가과학기술정책정보
+www.now.go.kr
+
+정보통신산업진흥원(Nipa) IT동향정보
+http://www.iita.re.kr
+
+한국보건산업진흥원
+http://www.khidi.or.kr/index.jsp
+
+한국자동차산업연구소
+http://kari.hyundai.com/Public/Default.aspx
+
+자동차부품연구원
+http://www.katech.re.kr/
+
+Automotive
+http://www.autoelectronics.co.kr
+
+대한상공회의소 RFID DB
+http://www.rfiddb.or.kr/
+
+대한상공회의소 Retail DB
+http://retaildb.korcham.net/Service/Main/appl/main.asp
+
+업종별 협회 리스트 Link Site
+www.kiet.re.kr/kiet_web/?sub_num=170
+
+국내연구기관 Link Site (정부출연 연구기관, 민간연구기관, 지자체 연구기관 등)
+http://www.kiet.re.kr/kiet_web/?sub_num=167
+
+인더스트리솔루션스 (SCM journals)
+http://www.scmjournal.co.kr/index.html
+
+[Global] 대외경제정책연구원 국가별 정보원
+http://www.kiep.go.kr/skin.jsp?bid=library_03_02&grp=library
+
+[Global] 대외경제정책연구원 온라인DB
+http://www.kiep.go.kr/skin.jsp?bid=Lib01&grp=library&tabValue=020002000000000
+
+KIET 해외산업정보
+http://www.kiet.go.kr/servlet/isearch
+
+[Global] Kotra 해외시장 정보
+www.globalwindow.org
+
+[Global] 산업연구원 해외현지 리포트
+http://www.kiet.re.kr/kiet_web/?sub_num=43
+
+[Global] 무역협회 품목별 시장동향 (해외)
+http://www.kita.net/newtri2/center/market_list.jsp?board_code=70000&rowcnt=20
+
+[Global] 해외진출 정보시스템
+http://www.ois.go.kr
+
+[Global] 중소기업 수출지원센터 해외시장 정보
+http://www.exportcenter.go.kr/info/board/info_list.jsp?board_type=osnews&D_idx=E11&M_idx=11_01
+
+국가통계포털
+http://kosis.kr/
+
+하나금융경영연구소 
+http://www.hanaif.re.kr/index.jsp
+
+미래에셋증권
+http://www.smartmiraeasset.com/index.jsp
+
+대신경제
+http://www.deri.co.kr/
+
+교보증권
+http://www.iprovest.com/default.jsp 
+ 
+메리츠증권
+http://www.imeritz.com/ 
+ 
+현대증권
+http://www.youfirst.co.kr/
+ 
+우리투자증권
+http://www.wooriwm.com/ 
+
+데일리클라우드
+http://www.ddaily.co.kr/cloud/
+
+물류신문
+http://www.klnews.co.kr/
+
+한국해운신문
+http://www.maritimepress.co.kr/
+
+한국건설신문
+http://www.conslove.co.kr/
+
+보건의료신문
+http://www.bosa.co.kr/
+
+자동차경제신문
+http://www.autodaily.co.kr/
