@@ -250,6 +250,9 @@ https://github.com/tanprathan/MobileApp-Pentest-Cheatsheet
 And/iOS 취약점 분석
 https://dazemonkey.tistory.com/category/Hacking%20%26%20Security/%EB%AA%A8%EC%9D%98%ED%95%B4%ED%82%B9
 
+iOS 12.4.3 탈옥하기
+https://hackcatml.tistory.com/43
+
 android 자동화진단 MObSF
 https://bourbonkk.tistory.com/65
 https://github.com/MobSF/Mobile-Security-Framework-MobSF
